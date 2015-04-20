@@ -1,0 +1,37 @@
+<!-- 
+John Stuart 
+CSCI 578
+Fall 2015	
+
+This describes the feed view, it allows the user to read the latest posts, if they wish to post they will have the ability to select
+the post view from the menu presented, which will change the view to the post view.
+
+Menu items are 
+	logout: logout of the application, laod the login view
+	post:   load the post view
+	
+ScrollView: this is used to hold the blog posts in the feed	
+	
+Button items are
+	moreFeed:  set the feed value to get more posts, reload feed view
+
+-->
+
+<Alloy>
+	<Window class="container" id="feedWindow">
+	    <ActionBar id="feedActionbar" title="TrojanNow" onHomeIconItemSelected="login" />
+
+		<Menu id="feedMenu" platform="android">
+		    <MenuItem id="feedLogout" title="Logout" onClick="onLogout" showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS" />
+		    <MenuItem id="feedPost" title="Post" onClick="post" />
+		</Menu>
+		
+		<ScrollView layout="vertical" id="feedView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false" height="80%" width="80%">
+		</ScrollView>	
+		
+		<View layout="vertical" height="10%" width="80%" bottom="0">
+			<Button id="moreFeed" onClick="moreFeed">Get More Posts</Button>	
+		</View>
+		
+	</Window>
+</Alloy>

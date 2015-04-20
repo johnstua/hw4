@@ -1,0 +1,16 @@
+<!-- 
+John Stuart 
+CSCI 578
+Fall 2015	
+
+
+Thisis the default view created by Alloy,
+
+The items on this screen are artifacts of eariler programming, they are left her for now in case I decide to use any 
+of them in the future.  In normal operation of the app these will not be seen.
+-->
+
+<Alloy>
+	<Window class="container">
+	</Window>
+</Alloy>

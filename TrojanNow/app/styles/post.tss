@@ -1,0 +1,42 @@
+
+".container" : {
+  backgroundColor: 'white'
+}
+
+"#postAnonymous[platform=android]" : {
+    style: Ti.UI.Android.SWITCH_STYLE_CHECKBOX,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	color: "#000"
+}
+
+"#postLight[platform=android]" : {
+    style: Ti.UI.Android.SWITCH_STYLE_CHECKBOX,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+}
+
+"#postTemperature[platform=android]" : {
+    style: Ti.UI.Android.SWITCH_STYLE_CHECKBOX,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+}
+
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+}
+
+"TextField": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+}
+
+"Button": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+}
+
+
+
+			

@@ -1,0 +1,36 @@
+
+".container" : {
+  backgroundColor: 'white'
+}
+
+"#addPassword": {
+    font: {
+        fontSize: '20'
+    },
+    left: '10',
+    color: "#000"
+}
+    
+"#addUsername": {
+    font: {
+        fontSize: '20'
+    },
+    left: '10',
+    color: "#000"
+}
+
+"#addPasswordConfirm": {
+    font: {
+        fontSize: '20'
+    },
+    left: '10',
+    color: "#000"
+}
+
+"#addUserButton": {
+    font: {
+        fontSize: '20'
+    },
+    left: '10',
+    color: "#000"
+}

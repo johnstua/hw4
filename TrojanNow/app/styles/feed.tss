@@ -1,0 +1,11 @@
+
+".container" : {
+  backgroundColor: 'white'
+}
+
+"#moreFeed": {
+    font: {
+        fontSize: '10'
+    },
+    color: "#000"
+}

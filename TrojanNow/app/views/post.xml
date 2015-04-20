@@ -1,0 +1,63 @@
+<!-- 
+John Stuart 
+CSCI 578
+Fall 2015	
+
+This describes the post view, it allows the user to input their blog and sensor and select the action 
+post, which will create an event that will be processed by the post Controller
+
+Menu items are
+	logout: logout of the application, load the login view
+	feed:   load the feed view
+
+TextAreas
+    postContent: content of the blog to be posted 
+    
+TextFields 
+    postTargetUser: optional target user 
+    
+Switch
+	postAnonymous:   optional leave my name out of this post
+	postLight:       optional and only available if there is a sensor available, add the value of ambiant light to this post
+	postTemperature: optional and only available if there is a sensor available, add the value of temperature to this post	
+	
+Button items are
+	postButton: post the content of the page, load the feed view  
+	
+-->
+
+<Alloy>
+	<Window id="postWindow" class="container">
+	    <ActionBar id="postActionbar" title="TrojanNow" onHomeIconItemSelected="feed" />
+
+		<Menu id="postMenu" platform="android">
+		    <MenuItem id="postMenuLogout" title="Logout" onClick="onLogout" showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS" />
+		    <MenuItem id="postMenuFeed" title="Feed" onClick="feed" />
+		</Menu>
+   		
+   		<View id="postView" layout="vertical">
+        	
+        	<View layout="vertical" height="30%" width="80%" top="0">
+        		<TextArea id="postContent"
+            		borderWidth="2" borderColor="#bbb" borderRadius="5"
+            		color="#888" textAlign="left" hint="content"
+            		top="20" width="300" height="100" maxLength="255" hintText="Write your Blog Here" />  
+   			</View>
+   			  			
+   			<View layout="vertical" height="40%" width="80%"  borderWidth="2" borderColor="black" borderRadius="3">
+				<Label text="Options"  color="black" />		
+				<TextField id="postTargetUser" hintText="Target User"></TextField>
+ 			
+ 				<Switch id="postAnonymous" title="Anonymous?" value="false" color="black"></Switch>
+   	   			<Switch id="postLight" title="Light Sensor Not Available" value="false" color="black" enabled="false"></Switch>
+   				<Switch id="postTemperature" title="Temperature Sensor Not Available" value="false" color="black" enabled="false"></Switch>
+     		</View>
+   			
+   			<View layout="vertical" height="30%" width="80%">
+				<Button id="postButton" onClick="onSubmitBlog">Submit</Button>	
+			</View>
+		
+		</View>
+		
+	</Window>
+</Alloy>

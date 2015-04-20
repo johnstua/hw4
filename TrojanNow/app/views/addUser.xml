@@ -1,0 +1,43 @@
+<!-- 
+John Stuart 
+CSCI 578
+Fall 2015	
+
+This describes the add user view, it allows the user to input their username, password (twice) and select the action 
+addUser, which will create an event that will be processed by the addUser Controller
+
+Menu items are 
+	login:  load the login view
+
+TextFields items are
+	addUserName:		username to create
+	addPassword:		password to create with user
+	addPasswordConfirm:	password verification, must match addPassword.
+
+Button items are
+	addUserButton: attempt to create a user on the cloud, if successful load feed, else reload addUser view
+
+-->
+
+
+<Alloy>
+	<Window class="container" id="window">
+
+    <ActionBar id="addActionbar" title="TrojanNow" onHomeIconItemSelected="login" />
+		<Menu id="addMenu" platform="android">
+		   	<MenuItem id="addMenulogin" title="Login" onClick="login" showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS" />
+		</Menu>
+
+		<View layout="vertical">
+			
+			<Label id="addNewLabel">New User</Label> 	
+			
+			<TextField id="addUsername" hintText="username"></TextField>
+    		<TextField id="addPassword" hintText="password" passwordMask="True"></TextField>
+    		<TextField id="addPasswordConfirm" hintText="passwordConfirm" passwordMask="True"></TextField>
+    		<Button id="addUserButton" onClick="onSignup">Submit</Button>
+		 	
+		</View>
+	
+	</Window>
+</Alloy>

@@ -1,0 +1,40 @@
+<!-- 
+John Stuart 
+CSCI 578
+Fall 2015	
+
+This describes the login user view, it allows the user to input their username, password and select the action 
+login, which will create an event that will be processed by the login Controller
+
+Menu items are
+	newUser: load the new user view
+	
+TextFields are
+	loginUserName: username to use to login
+	loginPassword: password to use to login
+	
+Button items are
+	loginButton: Attempts login, loads feed view on success, falls back to login view on error after displaying an alert.
+
+
+-->
+
+<Alloy>
+	<Window class="container" id="window">
+
+    <ActionBar id="loginActionbar" title="TrojanNow" onHomeIconItemSelected="login" />
+		<Menu id="loginMenu" platform="android">
+		   	<MenuItem id="loginNewUser" title="New User" onClick="addUser" showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS" />
+		</Menu>
+
+		<View layout="vertical" borderWidth="2" borderColor="black" borderRadius="3">
+			
+			<Label id="loginLabel">Login</Label> 	
+			<TextField id="loginUsername" hintText="username"></TextField>
+    		<TextField id="loginPassword" hintText="password" passwordMask="True"></TextField>
+    		<Button id="loginButton" onClick="onLogin">Submit</Button>
+		
+		</View>
+
+	</Window>
+</Alloy>

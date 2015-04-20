@@ -1,0 +1,35 @@
+".container": {
+	backgroundColor:"white",
+}
+
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+}
+
+"#loginButton": {
+    font: {
+        fontSize: '20'
+    },
+    left: '10',
+    color: "#000"
+}
+
+"#loginPassword": {
+    font: {
+        fontSize: '20'
+    },
+    left: '10',
+    color: "#000"
+}
+
+
+"#loginUsername": {
+    font: {
+        fontSize: '20'
+    },
+    left: '10',
+    color: "#000"
+    
+}
